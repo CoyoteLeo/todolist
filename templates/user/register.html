@@ -1,0 +1,42 @@
+{% extends 'user/base.html' %}
+{% block title %}
+    註冊 Register
+{% endblock %}
+{% block header %}
+    <p align="center" class="h2 text-uppercase">
+        註冊 register
+    </p><br>
+{% endblock %}
+{% block main %}
+    {% if error_message %}
+        <p><font color="red">{{ error_message|linebreaksbr }}</font></p>
+    {% endif %}
+    <form action="" method="post">{% csrf_token %}
+        <table align="center">
+            <tr>
+                <td align="right"><p><label for="id_username">使用者名稱：</label></p></td>
+                <td><p>
+                    <input type="text" name="username" maxlength="150" autofocus required id="id_username"
+                           value="{% if form.username.value %}{{ form.username.value }}{% endif %}"/>
+                </p></td>
+            </tr>
+            <tr>
+                <td align="right"><p><label for="id_password1">建立密碼：</label></p></td>
+                <td>
+                    <p>
+                        <input type="password" name="password1" required id="id_password1"/>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><p><label for="id_password2">密碼確認：</label></p></td>
+                <td>
+                    <p>
+                        <input type="password" name="password2" required id="id_password2"/>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <button type="submit" name="register" value="">送出</button>
+    </form>
+{% endblock %}

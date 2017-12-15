@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    首頁 Main Page
+{% endblock %}
+{% block header %}
+    <p align="center" class="h2">
+        首頁 Main Page
+    </p><br>
+{% endblock %}
+{% block main %}
+    <table border="0">
+        <tr>
+            <td align="right">待辦事項：</td>
+            <td><a href="{% url "todolist:index" %}">ToDoList</a></td>
+        </tr>
+        <tr>
+            <td align="right">使用者資料：</td>
+            <td><a href="{% url "user:profile" %}">個人資料</a></td>
+        </tr>
+        <tr>
+            <td align="right">作者簡介：</td>
+            <td><a href="{% url "self_introduction:index" %}">關於作者</a></td>
+        </tr>
+    </table>
+{% endblock %}
