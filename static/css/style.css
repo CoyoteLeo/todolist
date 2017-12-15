@@ -1,0 +1,17 @@
+div.content {
+    overflow: hidden;
+    width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.see_more_link {
+    display: block;
+    padding: 12px 0
+}
+
+._3cht .see_more_link_inner {
+    background: url(/rsrc.php/v3/y_/r/1ap-uieh5nb.png) no-repeat right 50%;
+    display: inline-block;
+    padding-right: 12px
+}
